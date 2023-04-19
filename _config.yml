@@ -1,9 +1,13 @@
 title: Alexon Uthayakumar # your name (or website title) here
-logo: "/images/portfolio.png" # your photo (or logo) here
+logo: "/images/profile.png" # your photo (or logo) here
 description:
   > # your text below (remove <br> elements if you don't need line breaks)
-  The purpose of this blog is to share my thoughts and experiences on various tech topics, including data science, AI, software programming, tools and frameworks, and more.
-
+  Software Developer and Data Scientist based in Paris. I write about data science, AI, software programming, tools and frameworks, and more.
+  <br>
+  [![Linkedin Badge](https://img.shields.io/badge/-alexon%20uthayakumar-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/alexon-uthayakumar/)](https://www.linkedin.com/in/alexon-uthayakumar/)
+  [![Gmail Badge](https://img.shields.io/badge/-alexon.uthayakumar@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:alexon.uthayakumar@gmail.com)](mailto:alexon.uthayakumar@gmail.com)
+  [![Twitter Badge](https://img.shields.io/badge/-@jr_alexon-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/jr_alexon)](https://twitter.com/jr_alexon)
+  [![Web](https://img.shields.io/website?color=399E5A&style=flat-square&up_message=ualexon.com&url=https://ualexon.com/)](https://ualexon.com/)
 theme: jekyll-theme-minimal
 google_analytics: G-3B0QDYB683 # your Google Analytics tracking ID here
 
