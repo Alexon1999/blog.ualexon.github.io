@@ -1,0 +1,4 @@
+pyqt6
+PyQt6-sip
+Pillow
+pyperclip
