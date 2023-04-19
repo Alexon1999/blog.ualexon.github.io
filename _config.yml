@@ -2,12 +2,17 @@ title: Alexon Uthayakumar # your name (or website title) here
 logo: "/assets/images/profile.png" # your photo (or logo) here
 description:
   > # your text below (remove <br> elements if you don't need line breaks)
+  <br>
   Software Developer and Data Scientist based in Paris. I write about data science, AI, software programming, tools and frameworks, and more.
   <br>
-  [![Linkedin Badge](https://img.shields.io/badge/-alexon%20uthayakumar-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/alexon-uthayakumar/)](https://www.linkedin.com/in/alexon-uthayakumar/)
-  [![Gmail Badge](https://img.shields.io/badge/-alexon.uthayakumar@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:alexon.uthayakumar@gmail.com)](mailto:alexon.uthayakumar@gmail.com)
-  [![Twitter Badge](https://img.shields.io/badge/-@jr_alexon-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/jr_alexon)](https://twitter.com/jr_alexon)
-  [![Web](https://img.shields.io/website?color=399E5A&style=flat-square&up_message=ualexon.com&url=https://ualexon.com/)](https://ualexon.com/)
+
+  <a href="https://github.com/Alexon1999"><img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&amp;logo=github&amp;logoColor=white" alt="Github Badge"></a>
+  <a href="https://www.linkedin.com/in/alexon-uthayakumar/"><img src="https://img.shields.io/badge/-alexon%20uthayakumar-blue?style=flat-square&amp;logo=Linkedin&amp;logoColor=white&amp;link=https://www.linkedin.com/in/alexon-uthayakumar/" alt="Linkedin Badge"></a>
+  <a href="mailto:alexon.uthayakumar@gmail.com"><img src="https://img.shields.io/badge/-alexon.uthayakumar@gmail.com-c14438?style=flat-square&amp;logo=Gmail&amp;logoColor=white&amp;link=mailto:alexon.uthayakumar@gmail.com" alt="Gmail Badge"></a>
+  <a href="https://twitter.com/jr_alexon"><img src="https://img.shields.io/badge/-@jr_alexon-1ca0f1?style=flat-square&amp;labelColor=1ca0f1&amp;logo=twitter&amp;logoColor=white&amp;link=https://twitter.com/jr_alexon" alt="Twitter Badge"></a>
+  <a href="https://medium.com/@ualexon"><img src="https://img.shields.io/badge/Medium-12100E?style=flat-square&amp;logo=medium&amp;logoColor=white" alt="Medium Badge"></a>
+  <a href="https://dev.to/ualexon"><img src="https://img.shields.io/badge/dev.to-0A0A0A?style=flat-badge&amp;logo=devdotto&amp;logoColor=white" alt="Dev.tp Badge"></a>
+  <a href="https://ualexon.com/"><img src="https://img.shields.io/website?color=399E5A&amp;style=flat-square&amp;up_message=ualexon.com&amp;url=https://ualexon.com/" alt="Web"></a>
 theme: jekyll-theme-minimal
 google_analytics: G-3B0QDYB683 # your Google Analytics tracking ID here
 
