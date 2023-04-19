@@ -1,10 +1,9 @@
 title: Alexon Uthayakumar # your name (or website title) here
-logo: "/assets/images/profile.png" # your photo (or logo) here
+logo: "/assets/images/profile-logo.png" # your photo (or logo) here
 description:
   > # your text below (remove <br> elements if you don't need line breaks)
   <br>
   Software Developer and Data Scientist based in Paris. I write about data science, AI, software programming, tools and frameworks, and more.
-  <br>
   <br>
   <div>
     <a href="https://github.com/Alexon1999"><img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&amp;logo=github&amp;logoColor=white" alt="Github Badge"></a>
