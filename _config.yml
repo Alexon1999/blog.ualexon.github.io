@@ -5,7 +5,7 @@ description:
   The purpose of this blog is to share my thoughts and experiences on various tech topics, including data science, AI, software programming, tools and frameworks, and more.
 
 theme: jekyll-theme-minimal
-google_analytics: UA-000000-0 # your Google Analytics tracking ID here
+google_analytics: G-3B0QDYB683 # your Google Analytics tracking ID here
 
 colors:
   crimson: "#900C3F"
