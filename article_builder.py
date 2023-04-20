@@ -1,7 +1,7 @@
 import os
 import sys
 from PyQt6.QtCore import Qt, QSize
-from PyQt6.QtGui import QPixmap, QFont, QAction, QIcon
+from PyQt6.QtGui import QPixmap, QFont, QIcon
 from PyQt6.QtWidgets import (
     QApplication,
     QWidget,
@@ -13,13 +13,15 @@ from PyQt6.QtWidgets import (
     QTextEdit,
     QLineEdit,
     QMessageBox,
-    QGridLayout,
     QListWidget,
     QListWidgetItem,
     QListView,
-    QMenu, QListWidget, QListWidgetItem, QFileDialog, QStyle, QListView, QAbstractItemView
+    QListWidget,
+    QListWidgetItem,
+    QFileDialog,
+    QListView,
+    QAbstractItemView
 )
-import subprocess
 import re
 import unicodedata
 
@@ -141,21 +143,21 @@ class BlogApp(QWidget):
                     os.makedirs(image_folder)
 
                 _, extension = os.path.splitext(file_name)
+
                 # os.path.basename() function returns the last component of the path
                 image_name = os.path.basename(file_name)
                 image_path = os.path.join(image_folder, image_name)
 
-                image_label = QLabel(self)
                 pixmap = QPixmap(file_name)
                 # pixmap = pixmap.scaledToHeight(700)
-                image_label.setPixmap(pixmap)
 
-                # add item to ImageListWidget
+                # save image into assets/images
+                pixmap.save(image_path)
+
+                # add image to ImageListWidget
                 self.image_list_widget.add_image(image_path)
                 self.image_paths.append(image_path)
 
-                # save image in to assets/images
-                pixmap.save(image_path)
 
         
     def submit_post(self):
