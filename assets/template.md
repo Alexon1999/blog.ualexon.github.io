@@ -1,6 +1,6 @@
 # [TITLE]
 
-<img src="[IMAGE]" alt="header image" />
+<img src="[HEADER_IMAGE]" alt="header image" />
 
 <br>
 
