@@ -75,7 +75,7 @@ class ImageListWidget(QListWidget):
 class BlogApp(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Blog App")
+        self.setWindowTitle("Article Builder App")
         self.setGeometry(100, 100, 800, 600)
 
         # Set up main label

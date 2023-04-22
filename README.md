@@ -8,6 +8,30 @@ This blog is built with a Minimal Jekyll theme for GitHub Pages [1].
 
 [1] Jekyll theme "Minimal" for GitHub Pages: https://github.com/pages-themes/minimal (CC0 1.0 Universal License)
 
+#### Article Builder App
+
+The Article Builder App is a software tool designed for writers who want to create beautiful and engaging articles. It is built using **PyQt6** and **Markdown** technologies, and it provides a simple and intuitive interface that allows users to write their articles in Markdown format.
+
+<img src="assets/images/article_builder_app.png" alt="article builder" width='400' />
+
+
+##### Features
+
+The article builder app allows you to:
+
+- Upload images and insert them into your article
+- Preview your markdown code in real time
+- Save your article as a markdown file
+
+##### Setup
+
+```bash
+python3 -m venv env
+pip3 install -r requirements.txt
+source env/bin/activate
+python3 article_builder.py
+```
+
 ## Contributing
 
 If you have suggestions, feedback, or ideas for new blog posts, feel free to open an issue or submit a pull request. I'm always looking for ways to improve my blog and welcome any contributions.
