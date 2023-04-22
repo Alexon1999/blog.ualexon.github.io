@@ -20,10 +20,13 @@ from PyQt6.QtWidgets import (
     QListWidgetItem,
     QFileDialog,
     QListView,
-    QAbstractItemView
+    QAbstractItemView,
+    QTabWidget,
+    QPlainTextEdit
 )
 import re
 import unicodedata
+import markdown
 
 def title_to_url(title):
     # unicodedata.normalize() is usedNormalize the title string by converting accented characters to their ASCII equivalent
@@ -40,16 +43,20 @@ def title_to_url(title):
 class ImageListWidget(QListWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setFixedSize(700, 150)
+        self.setFixedSize(800, 110)
         self.setViewMode(QListView.ViewMode.IconMode)
-        self.setIconSize(QSize(150, 150))
+        self.setIconSize(QSize(150, 110))
         self.setResizeMode(QListView.ResizeMode.Adjust)
         self.setSelectionMode(QAbstractItemView.SelectionMode.ExtendedSelection)
         self.itemClicked.connect(self.copy_path_to_clipboard)
 
     def add_image(self, image_path):
         item = QListWidgetItem()
-        pixmap = QPixmap(image_path).scaled(150, 150, aspectRatioMode=Qt.AspectRatioMode.KeepAspectRatio)
+        pixmap = QPixmap(image_path).scaled(
+            150,
+            110,
+            aspectRatioMode=Qt.AspectRatioMode.KeepAspectRatio
+            )
         item.setIcon(QIcon(pixmap))
         item.setData(Qt.ItemDataRole.UserRole, image_path)
         item.setToolTip(image_path)
@@ -93,9 +100,28 @@ class BlogApp(QWidget):
         self.header_img_url_label = QLabel("header image url:", self)
         self.header_img_url_input = QLineEdit(self)
 
-        # Set up markdown input
-        self.markdown_description_label = QLabel("Markdown:", self)
-        self.markdown_description_input = QTextEdit(self)
+        # create tab widget (Markdown/Preview)
+        self.tab_widget = QTabWidget()
+
+        # create markdown widget
+        markdown_widget = QWidget()
+        markdown_layout = QVBoxLayout()
+        markdown_widget.setLayout(markdown_layout)
+        self.markdown_editor = QPlainTextEdit()
+        markdown_layout.addWidget(self.markdown_editor)
+        self.tab_widget.addTab(markdown_widget, "Markdown")
+
+        # create preview widget
+        preview_widget = QWidget()
+        preview_layout = QVBoxLayout()
+        preview_widget.setLayout(preview_layout)
+        self.preview_widget = QTextEdit()
+        self.preview_widget.setReadOnly(True)
+        preview_layout.addWidget(self.preview_widget)
+        self.tab_widget.addTab(preview_widget, "Preview")
+
+        # set up signals and slots
+        self.markdown_editor.textChanged.connect(self.update_preview)
 
         # Set up submit button
         self.submit_button = QPushButton("Submit", self)
@@ -113,8 +139,7 @@ class BlogApp(QWidget):
         self.form_layout.addWidget(self.article_name_input)
         self.form_layout.addWidget(self.header_img_url_label)
         self.form_layout.addWidget(self.header_img_url_input)
-        self.form_layout.addWidget(self.markdown_description_label)
-        self.form_layout.addWidget(self.markdown_description_input)
+        self.form_layout.addWidget(self.tab_widget)
 
         # Set up horizontal layout for form and submit button
         self.h_layout = QHBoxLayout()
@@ -159,15 +184,19 @@ class BlogApp(QWidget):
                 self.image_paths.append(image_path)
 
 
-        
+    def update_preview(self):
+        markdown_text = self.markdown_editor.toPlainText()
+        html_text = markdown.markdown(markdown_text)
+        self.preview_widget.setHtml(html_text)
+
     def submit_post(self):
         # gather informations
-        markdown_description = self.markdown_description_input.toPlainText()
+        description = self.markdown_editor.toPlainText()
         article_name = self.article_name_input.text()
         header_img_url = self.header_img_url_input.text()
 
         # verify informations
-        if not header_img_url or not markdown_description or not header_img_url or not article_name:
+        if not header_img_url or not description or not header_img_url or not article_name:
             QMessageBox.warning(self, "Attention", "Veuillez remplir tous les champs.")
             return
 
@@ -178,7 +207,7 @@ class BlogApp(QWidget):
         # replace all the   placeholders by our informations
         markdown = template.replace("[TITLE]", article_name)
         markdown = markdown.replace("[HEADER_IMAGE]", header_img_url)
-        markdown = markdown.replace("[DESCRIPTION]", markdown_description)
+        markdown = markdown.replace("[DESCRIPTION]", description)
 
         # save the markdown file
         with open(f"{title_to_url(article_name)}.md", "w", encoding="utf-8") as f:
@@ -187,7 +216,7 @@ class BlogApp(QWidget):
         # Reset du formulaire
         self.article_name_input.clear()
         self.header_img_url_input.clear()
-        self.markdown_description_input.clear()
+        self.markdown_editor.clear()
         self.image_paths = []
         self.image_list_widget.clear_all_images()
 
