@@ -92,6 +92,12 @@ class BlogApp(QWidget):
         # uploaded images List
         self.image_list_widget = ImageListWidget(self)
 
+        # instruction label
+        self.instruction_label = QLabel(self)
+        self.instruction_label.setText("📋 click on image to copy URL")
+        self.instruction_label.setStyleSheet("color: gray")
+        self.instruction_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
         # Set up article input
         self.article_name_label = QLabel("article name:", self)
         self.article_name_input = QLineEdit(self)
@@ -125,6 +131,7 @@ class BlogApp(QWidget):
 
         # Set up submit button
         self.submit_button = QPushButton("Submit", self)
+        self.submit_button.setStyleSheet("background-color: #5DFDCB")
         self.submit_button.clicked.connect(self.submit_post)
 
         # Set up main layout
@@ -132,6 +139,7 @@ class BlogApp(QWidget):
         self.main_layout.addWidget(self.main_label)
         self.main_layout.addWidget(self.upload_button)
         self.main_layout.addWidget(self.image_list_widget)
+        self.main_layout.addWidget(self.instruction_label)
 
         # Set up form layout
         self.form_layout = QVBoxLayout()
