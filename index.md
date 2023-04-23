@@ -30,12 +30,12 @@ If you're curious about what it takes to get a second date, look no further than
       <img src="assets/images/speed_dating_results_1.png" height="200" />
     </div>
     <div>
-      <p style='font-size: 0.8rem'><small><b>Figure 1</b>: Is it important to belong to the same human race</small></p>
+      <p style='font-size: 0.8rem'><small><b>Figure 2</b>: What Are Participants Looking For in Their Matches</small></p>
       <img src="assets/images/speed_dating_results_3.png" height="170" />
     </div>
   </div>
   <div>
-    <p style='font-size: 0.8rem'><small><b>Figure 2</b>: What are the attributes that matter in the final decision</small></p>
+    <p style='font-size: 0.8rem'><small><b>Figure 3</b>: What are the attributes that matter in the final decision</small></p>
     <img src="assets/images/speed_dating_results_2.png" height="260" />
   </div>
 </div>
