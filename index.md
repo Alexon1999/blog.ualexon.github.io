@@ -58,7 +58,7 @@ The growth of ride-sharing services like Uber has revolutionized the transportat
   </div>
 </div>
 
-[![](https://img.shields.io/badge/Python-white?logo=Python)](#) [![](https://img.shields.io/badge/Jupyter-white?logo=Jupyter)](#) [![](https://img.shields.io/badge/Pandas-white?logo=pandas&logoColor=blue)](#) [![](https://img.shields.io/badge/Numpy-white?logo=numpy&logoColor=4CABCF)](#) [![](https://img.shields.io/badge/ScikitLearn-white?logo=scikit-learn)](#) [![](https://img.shields.io/badge/Matplotlib-white?logo=matplotlib&logoColor=blue)](#) [![](https://img.shields.io/badge/Plotly-white?logo=plotly&logoColor=blue)](#) [![](https://img.shields.io/badge/Seaborn-white?logo=seaborn&logoColor=blue)](#)
+[![](https://img.shields.io/badge/Python-white?logo=Python)](#) [![](https://img.shields.io/badge/Jupyter-white?logo=Jupyter)](#) [![](https://img.shields.io/badge/Pandas-white?logo=pandas&logoColor=blue)](#) [![](https://img.shields.io/badge/Numpy-white?logo=numpy&logoColor=4CABCF)](#) [![](https://img.shields.io/badge/ScikitLearn-white?logo=scikit-learn)](#) [![](https://img.shields.io/badge/Matplotlib-white?logo=matplotlib&logoColor=blue)](#) [![](https://img.shields.io/badge/Plotly-white?logo=plotly&logoColor=blue)](#)
 
 [View code on Github](https://github.com/Alexon1999/uber-pickup-analysis)
 
